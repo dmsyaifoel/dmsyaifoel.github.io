@@ -10,14 +10,11 @@ website:
         text: Home
       - href: sv.qmd
         text: Samenvatting
+      - href: form.qmd
+        text: Formulebladen
 
 format:
-  html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
+  html: default
 
 
 
