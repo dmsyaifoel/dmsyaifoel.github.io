@@ -1,7 +1,7 @@
 ---
-title: "Website"
+title: "WB1630-20 Statica"
 ---
 
-This is a Quarto website.
+Dit is de website van het vak WB1630-20 Statica voor de eerstjaars Werktuigbouwkunde en Maritieme Techniek aan de TU Delft.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Work in progress.

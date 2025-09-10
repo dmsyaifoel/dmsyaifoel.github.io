@@ -1,0 +1,99 @@
+---
+title: "Formulebladen"
+---
+
+# Wat moet je weten van de formulebladen?
+
+1.  Voorin Hibbeler:
+
+    1.  SI Prefixes: **moet je weten**
+
+    2.  Conversion Factors: hoef je niet te weten
+
+    3.  Fundamental Equations of Statics: **moet je weten** behalve
+
+        1.  bij Directions het gedeelte met de cosinussen
+
+        2.  Area and Mass Moments of Inertia
+
+    4.  Geometric Properties of Line and Area Elements:
+
+        1.  **Je moet weten**: oppervlakte van een cirkelsegment
+            (circular sector), oppervlakte van een hele cirkel,
+            oppervlakte van een driehoek, oppervlakte van een rechthoek,
+            geometrisch centrum van een hele cirkel, geometrisch centrum
+            van een rechthoek, geometrisch centrum van een driehoek.
+
+        2.  Van de overige vormen moet je de oppervlakte en het
+            geometrisch centrum kunnen bepalen door middel van
+            integreren.
+
+        3.  Area Moment of Inertia hoef je niet te weten.
+
+    5.  Center of Gravity and Mass Moment of Inertia of Homogeneous
+        Solids:
+
+        1.  Voor elke vorm moet je het volume en het geometrisch centrum
+            kunnen bepalen door middel van integreren.
+
+        2.  Mass Moment of Inertia ($I_{xx}$ etc.) hoef je niet te
+            weten.
+
+2.  Achterin Hibbeler, Appendix A:
+
+    1.  Geometry and Trigonometry Review: **moet je weten** behalve de
+        cosecant/secant/cotangens
+
+    2.  Trigonometric Identities: hoef je niet te weten
+
+    3.  Quadratic Formula: **moet je weten**
+
+    4.  Hyperbolic Functions: hoef je niet te weten
+
+    5.  Power-Series Expansions: hoef je niet te weten
+
+    6.  Derivatives: **je hoeft alleen te weten**
+        $u^n, uv, u/v, \sin u, \cos u$
+
+    7.  Integrals: **je hoeft alleen te weten**:
+
+        1.  $x^n$
+
+        2.  $1/(a+bx)$
+
+        3.  $\sin x$
+
+        4.  $\cos x$
+
+        5.  $e^{ax}$
+
+3.  Formulebladen vectorproducten (Brightspace $\rightarrow$ Content
+    $\rightarrow$ Wiskunde): **moet je weten**
+
+4.  En tenslotte: **de sinusregel en de cosinusregel moet je weten**
+
+De volgende formuleshoef je **niet** te weten. Ze worden
+bij de vraag gegeven, als je ze nodig hebt.
+
+# Grondformule goniometrie
+
+$$\sin^2 x+\cos^2 x = 1$$
+
+# Hoeksom en hoekverschil {#hoeksom-en-hoekverschil .unnumbered}
+
+$$\sin x\pm y = \sin x \cos y \pm \cos x \sin y$$
+$$\cos x\pm y = \cos x \cos y \mp \sin x \sin y$$
+$$\tan x\pm y = \frac{\tan x \pm \tan y}{1\mp \tan x \tan y}y$$
+
+# Dubbele hoek {#dubbele-hoek .unnumbered}
+
+$$\sin 2x = 2\sin x \cos x =  (\sin x + \cos x)^2 - 1 = \frac{2 \tan x}{1+\tan^2 x}$$
+$$\cos 2x =  \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1 - 2\sin^2 x = \frac{1-\tan^2 x}{1+\tan^2 x}$$
+$$\tan 2x = \frac{2\tan x}{1 - \tan^2 x}$$
+
+# Afgeleiden {#afgeleiden .unnumbered}
+
+$$\frac{d}{dx}\tan x = \frac{1}{\cos^2 x} = 1+\tan^2 x$$
+$$\frac{d}{dx}\arcsin x = \frac{1}{\sqrt{1-x^2}}$$
+$$\frac{d}{dx}\arccos x = -\frac{1}{\sqrt{1-x^2}}$$
+$$\frac{d}{dx}\arctan x = \frac{1}{1+x^2}$$

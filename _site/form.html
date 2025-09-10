@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Website</title>
+<title>Formulebladen – WB1630-20 Statica</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Website</span>
+    <span class="navbar-title">WB1630-20 Statica</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -93,12 +122,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./sv.html"> 
+<span class="menu-text">Samenvatting</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,15 +140,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#wat-moet-je-weten-van-de-formulebladen" id="toc-wat-moet-je-weten-van-de-formulebladen" class="nav-link active" data-scroll-target="#wat-moet-je-weten-van-de-formulebladen">Wat moet je weten van de formulebladen?</a></li>
+  <li><a href="#grondformule-goniometrie" id="toc-grondformule-goniometrie" class="nav-link" data-scroll-target="#grondformule-goniometrie">Grondformule goniometrie</a></li>
+  <li><a href="#hoeksom-en-hoekverschil" id="toc-hoeksom-en-hoekverschil" class="nav-link" data-scroll-target="#hoeksom-en-hoekverschil">Hoeksom en hoekverschil</a></li>
+  <li><a href="#dubbele-hoek" id="toc-dubbele-hoek" class="nav-link" data-scroll-target="#dubbele-hoek">Dubbele hoek</a></li>
+  <li><a href="#afgeleiden" id="toc-afgeleiden" class="nav-link" data-scroll-target="#afgeleiden">Afgeleiden</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Website</h1>
+<h1 class="title">Formulebladen</h1>
 </div>
 
 
@@ -136,10 +175,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="wat-moet-je-weten-van-de-formulebladen" class="level1">
+<h1>Wat moet je weten van de formulebladen?</h1>
+<ol type="1">
+<li><p>Voorin Hibbeler:</p>
+<ol type="1">
+<li><p>SI Prefixes: <strong>moet je weten</strong></p></li>
+<li><p>Conversion Factors: hoef je niet te weten</p></li>
+<li><p>Fundamental Equations of Statics: <strong>moet je weten</strong> behalve</p>
+<ol type="1">
+<li><p>bij Directions het gedeelte met de cosinussen</p></li>
+<li><p>Area and Mass Moments of Inertia</p></li>
+</ol></li>
+<li><p>Geometric Properties of Line and Area Elements:</p>
+<ol type="1">
+<li><p><strong>Je moet weten</strong>: oppervlakte van een cirkelsegment (circular sector), oppervlakte van een hele cirkel, oppervlakte van een driehoek, oppervlakte van een rechthoek, geometrisch centrum van een hele cirkel, geometrisch centrum van een rechthoek, geometrisch centrum van een driehoek.</p></li>
+<li><p>Van de overige vormen moet je de oppervlakte en het geometrisch centrum kunnen bepalen door middel van integreren.</p></li>
+<li><p>Area Moment of Inertia hoef je niet te weten.</p></li>
+</ol></li>
+<li><p>Center of Gravity and Mass Moment of Inertia of Homogeneous Solids:</p>
+<ol type="1">
+<li><p>Voor elke vorm moet je het volume en het geometrisch centrum kunnen bepalen door middel van integreren.</p></li>
+<li><p>Mass Moment of Inertia (<span class="math inline">\(I_{xx}\)</span> etc.) hoef je niet te weten.</p></li>
+</ol></li>
+</ol></li>
+<li><p>Achterin Hibbeler, Appendix A:</p>
+<ol type="1">
+<li><p>Geometry and Trigonometry Review: <strong>moet je weten</strong> behalve de cosecant/secant/cotangens</p></li>
+<li><p>Trigonometric Identities: hoef je niet te weten</p></li>
+<li><p>Quadratic Formula: <strong>moet je weten</strong></p></li>
+<li><p>Hyperbolic Functions: hoef je niet te weten</p></li>
+<li><p>Power-Series Expansions: hoef je niet te weten</p></li>
+<li><p>Derivatives: <strong>je hoeft alleen te weten</strong> <span class="math inline">\(u^n, uv, u/v, \sin u, \cos u\)</span></p></li>
+<li><p>Integrals: <strong>je hoeft alleen te weten</strong>:</p>
+<ol type="1">
+<li><p><span class="math inline">\(x^n\)</span></p></li>
+<li><p><span class="math inline">\(1/(a+bx)\)</span></p></li>
+<li><p><span class="math inline">\(\sin x\)</span></p></li>
+<li><p><span class="math inline">\(\cos x\)</span></p></li>
+<li><p><span class="math inline">\(e^{ax}\)</span></p></li>
+</ol></li>
+</ol></li>
+<li><p>Formulebladen vectorproducten (Brightspace <span class="math inline">\(\rightarrow\)</span> Content <span class="math inline">\(\rightarrow\)</span> Wiskunde): <strong>moet je weten</strong></p></li>
+<li><p>En tenslotte: <strong>de sinusregel en de cosinusregel moet je weten</strong></p></li>
+</ol>
+<p>De volgende formuleshoef je <strong>niet</strong> te weten. Ze worden bij de vraag gegeven, als je ze nodig hebt.</p>
+</section>
+<section id="grondformule-goniometrie" class="level1">
+<h1>Grondformule goniometrie</h1>
+<p><span class="math display">\[\sin^2 x+\cos^2 x = 1\]</span></p>
+</section>
+<section id="hoeksom-en-hoekverschil" class="level1 unnumbered">
+<h1 class="unnumbered">Hoeksom en hoekverschil</h1>
+<p><span class="math display">\[\sin x\pm y = \sin x \cos y \pm \cos x \sin y\]</span> <span class="math display">\[\cos x\pm y = \cos x \cos y \mp \sin x \sin y\]</span> <span class="math display">\[\tan x\pm y = \frac{\tan x \pm \tan y}{1\mp \tan x \tan y}y\]</span></p>
+</section>
+<section id="dubbele-hoek" class="level1 unnumbered">
+<h1 class="unnumbered">Dubbele hoek</h1>
+<p><span class="math display">\[\sin 2x = 2\sin x \cos x =  (\sin x + \cos x)^2 - 1 = \frac{2 \tan x}{1+\tan^2 x}\]</span> <span class="math display">\[\cos 2x =  \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1 - 2\sin^2 x = \frac{1-\tan^2 x}{1+\tan^2 x}\]</span> <span class="math display">\[\tan 2x = \frac{2\tan x}{1 - \tan^2 x}\]</span></p>
+</section>
+<section id="afgeleiden" class="level1 unnumbered">
+<h1 class="unnumbered">Afgeleiden</h1>
+<p><span class="math display">\[\frac{d}{dx}\tan x = \frac{1}{\cos^2 x} = 1+\tan^2 x\]</span> <span class="math display">\[\frac{d}{dx}\arcsin x = \frac{1}{\sqrt{1-x^2}}\]</span> <span class="math display">\[\frac{d}{dx}\arccos x = -\frac{1}{\sqrt{1-x^2}}\]</span> <span class="math display">\[\frac{d}{dx}\arctan x = \frac{1}{1+x^2}\]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
